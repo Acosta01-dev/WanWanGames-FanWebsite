@@ -1,0 +1,56 @@
+#home {
+    position: relative;
+    bottom: 10rem; //Exclusivamente para que sobrepase el ribbon.
+}
+
+.home-section {
+
+    display: grid;
+    grid-template-columns: 70% 30%;
+    background-color: #fff;
+    /* Color de fondo de la "hoja" */
+    margin-top: 0;
+    padding: 2rem;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    /* Sombreado para la "hoja" */
+
+    padding-top: 12rem; //Espacio entre el header/ribbon y el main.
+
+    & .column {
+        border: 1px solid black;
+        margin-right: 5px;
+
+        &:last-child {
+            background-color: rebeccapurple;
+        }
+    }
+}
+
+.highlight {
+    & figcaption {
+        position: absolute;
+        bottom: 2rem;
+        padding: 1rem;
+
+        background-color: rgba(10, 9, 9, 0.719); /* Color de fondo con transparencia */
+        color: white;
+    }
+}
+
+.column-image-highlight {
+
+    height: 350px;
+    /* Alto del contenedor */
+    overflow: hidden;
+
+    /* Oculta cualquier parte de la imagen que se desborde */
+    & img {
+        width: 100%;
+        /* Ancho máximo de la imagen */
+        height: 100%;
+        /* Alto máximo de la imagen */
+        object-fit: cover;
+        /* Evita la distorsión de la imagen */
+    }
+}
