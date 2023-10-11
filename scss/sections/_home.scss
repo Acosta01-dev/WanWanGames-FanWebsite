@@ -1,13 +1,6 @@
-#container {
-    position: relative;
-    bottom: 10rem;
-    /*Exclusivamente para que sobrepase el ribbon.*/
 
-    background-color: #fff;
 
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
+/////////////THUMNAILS DERECHA-ABAJO//////////////////
 .home-section {
     padding-top: 7.7rem;
 
@@ -20,7 +13,7 @@
     & .column {
         padding: 0px;
         position: relative;
-
+        z-index: 111;
         @media (min-width: $screen-md) {
             padding: 5px;
             padding-left: 0px;
@@ -40,8 +33,9 @@
 }
 
 .highlight {
+    
     @media (min-width: $screen-md) {}
-
+    margin-left: 5px;
     & figcaption {
         width: 70%;
     }
@@ -59,6 +53,8 @@
         object-fit: cover;
     }
 }
+/////////////THUMNAILS DERECHA-ABAJO//////////////////
+
 
 /////////////THUMNAILS DERECHA-ABAJO//////////////////
 .thumbnails {

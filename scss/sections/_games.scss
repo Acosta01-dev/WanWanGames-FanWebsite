@@ -1,2 +1,7 @@
 .games-section{
+    background-color: $color-1;
+    & .subtitle{
+        position: relative;
+        bottom: 14vh;
+    }
 }

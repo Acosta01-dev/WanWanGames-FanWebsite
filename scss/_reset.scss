@@ -1,6 +1,4 @@
 // _reset.scss
-
-// Establece los márgenes y el relleno en 0 y elimina los bordes en todos los elementos
 * {
     margin: 0;
     padding: 0;
@@ -8,9 +6,6 @@
     box-sizing: border-box;
 }
 
-
-
-// Establece el estilo de fuente a nivel global
 body {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
@@ -25,25 +20,27 @@ body {
     }
 }
 
-section{
-   
-}
-
-
-// Elimina la lista de estilos de viñetas en listas no ordenadas
 ul {
     list-style: none;
 }
 
-// Elimina la decoración de enlaces
 a {
     text-decoration: none;
 }
 
-// Define estilos para la imagen para que no afecte el diseño
 img {
     max-width: 100%;
     height: auto;
 }
 
-// Otros estilos globales según tus necesidades
+// Otros estilos globales 
+
+main {
+    position: relative;
+    bottom: 10rem;
+    /*Exclusivamente para que sobrepase el ribbon.*/
+
+    background-color: #fff;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
