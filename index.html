@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="./app/app.js" defer></script>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -18,53 +23,64 @@
             </div>
             <nav class="header_nav">
                 <ul>
-                    <li>
+                    <li class="header_nav-item">
                         home
                     </li>
-                    <li>
+                    <li class="header_nav-item">
                         our games
                     </li>
-                    <li>
+                    <li class="header_nav-item">
                         contact us
                     </li>
+                    <li class="burger-menu">a
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </li>
+
                 </ul>
             </nav>
         </h2>
     </header>
 
-    <section id="home">
+    <section id="container"> <!-- SECTIONS/HOME -->
         <div class="home-section">
             <div class="column highlight">
                 <div class="column-image column-image-highlight">
                     <img src="./img/TriggerTreat.gif" alt="" />
                 </div>
-                <figcaption>
+                <figcaption class="overlay">
                     <div class="date"><span class="day">28</span><span class="month">Oct</span></div>
                     <h3>The World Ended Yesterday</h3>
                     <p>
-
                         You know what we need, Hobbes? We need an attitude. Yeah, you can't be cool if you don't
                         have an attitude.
                     </p>
                 </figcaption>
             </div>
-            <div class="column no-highlight">
-                <div class="image-overlay">
+            <div class="column thumbnails">
+                <div class="thumbnails_image-overlay">
                     <img src="./img/toughbippy.gif" alt="" />
                     <div class="overlay"> TOUGH BIPPY </div>
                 </div>
-                <div class="image-overlay">
+                <div class="thumbnails_image-overlay">
                     <img src="./img/TriggerTreat2.gif" alt="" />
                     <div class="overlay">TRIGGER TREAT</div>
                 </div>
-                <div class="image-overlay">
-                    <img src="./img/untitledpirategame.png" alt="" />
+                <div class="thumbnails_image-overlay">
+                    <img src="./img/TriggerTreat2.gif" alt="" />
                     <div class="overlay">UNTITLED PIRATE GAME</div>
                 </div>
             </div>
-            
         </div>
-    </section>
+        <div class="games-section">
+          Lorem<br>
+          Lorem<br>
+          Lorem<br>
+
+        </div>
+    </section> <!-- fin SECTIONS/HOME -->
+
 </body>
 
 </html>

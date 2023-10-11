@@ -1,83 +1,121 @@
-#home {
+#container {
     position: relative;
-    bottom: 10rem; /*Exclusivamente para que sobrepase el ribbon.*/
+    bottom: 10rem;
+    /*Exclusivamente para que sobrepase el ribbon.*/
+
+    background-color: #fff;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .home-section {
+    padding-top: 7.7rem;
 
-    display: grid;
-    grid-template-columns: 70% 30%;
-    background-color: #fff;
-    margin-top: 0;
-    padding: 2rem;
-
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    
-
-    padding-top: 12rem; /*Espacio entre el header/ribbon y el main.*/
+    @media (min-width: $screen-md) {
+        display: grid;
+        grid-template-columns: 70% 30%;
+        padding-top: 12rem;
+    }
 
     & .column {
-        margin-right: 5px;
+        padding: 0px;
+        position: relative;
 
+        @media (min-width: $screen-md) {
+            padding: 5px;
+            padding-left: 0px;
+        }
+
+        /* Agrega esta línea para posicionar el figcaption relativo a este contenedor */
         &:last-child {
-            background-color: rgba(102, 51, 153, 0);
-            height: 350px;  /*Tamanio de la columna derecha.*/
+            height: 100px;
+
+            @media (min-width: $screen-md) {
+
+                height: 350px;
+                /*Tamanio de la columna derecha.*/
+            }
         }
     }
 }
 
 .highlight {
-    & figcaption {
-        position: absolute;
-        bottom: 2rem;
-        padding: 1rem;
+    @media (min-width: $screen-md) {}
 
-        background-color: rgba(10, 9, 9, 0.719); 
-        color: white;
+    & figcaption {
+        width: 70%;
     }
 }
 
 .column-image-highlight {
-
-    height: 350px; /* Alto del contenedor highlight, igual al de la columna derecha*/
+    height: 350px;
+    /* Alto del contenedor highlight, igual al de la columna derecha*/
     overflow: hidden;
 
     & img {
         width: 100%;
+        max-height: 100%;
         height: 100%;
         object-fit: cover;
     }
 }
 
+/////////////THUMNAILS DERECHA-ABAJO//////////////////
+.thumbnails {
+    width: calc(100% + 5px);
 
-///////////////////////////////
-.no-highlight{
-    & .image-overlay{
+    /* Ancho del 100% más 5 píxeles adicionales */
+    @media (min-width: $screen-md) {
+        width: 100%;
+    }
+
+    & .thumbnails_image-overlay {
+
         background-color: rgba(0, 128, 0, 0);
-        height: 33%;
+        height: 100%;
+
+        /* Altura de los thumbnails debajo */
+        @media (min-width: $screen-md) {
+            height: 34.3%;
+            /* Altura de los thumbnails en la derecha */
+        }
 
         & img {
-            object-fit: cover; 
-            width: 100%; 
-            max-height: 100%; /* Añade esto para asegurarte de que la imagen no sea más alta que el div */
-
-           
-            height: 100%;
-            object-fit: cover; /* Esto hará que la imagen ocupe todo el contenedor sin distorsionarse */
+            width: 100%;
+            max-height: 100%;
+            height: calc(100% + 115px);
+            object-fit: cover;
+            /* Esto hará que la imagen ocupe todo el contenedor sin distorsionarse */
         }
     }
 }
 
+.thumbnails_image-overlay {
+    position: relative;
+    float: left;
+    /* Asegura que los elementos internos se posicionen en relación a este contenedor */
+    width: 33%;
 
-.image-overlay {
-    position: relative; /* Asegura que los elementos internos se posicionen en relación a este contenedor */
+    @media (min-width: $screen-md) {
+        width: 100%;
+    }
 }
 
 .overlay {
-    position: absolute; /* Coloca el elemento en posición absoluta con respecto al contenedor padre */
-    bottom: 0; 
-    left: 0; 
-    background-color: rgba(0, 0, 0, 0.5); 
-    color: white; 
-    padding: 10px; 
+    position: absolute;
+    /* Coloca el elemento en posición absoluta con respecto al contenedor padre */
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
 }
+
+figcaption.overlay{
+    bottom: 10px;
+}
+/////////////FIN THUMNAILS DERECHA-ABAJO//////////////////
+
+
+/////////////BURGUER MENU//////////////////
+/////////////FINBURGUER MENU//////////////////

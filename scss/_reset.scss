@@ -12,16 +12,22 @@
 
 // Establece el estilo de fuente a nivel global
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
 
-    margin-left: 15%;
-    margin-right: 15%;
-
     background-color: rgb(209, 209, 209);
+
+    @media (min-width: $screen-md) {
+        margin-left: 15%;
+        margin-right: 15%;
+    }
 }
 
+section{
+   
+}
 
 
 // Elimina la lista de estilos de viñetas en listas no ordenadas
