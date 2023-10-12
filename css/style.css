@@ -8,6 +8,7 @@ de hecho, le otorgo prioridad en cuanto a detalles al diseño de escritorio.*/
   box-sizing: border-box; }
 
 body {
+  overflow-x: hidden;
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -83,13 +84,15 @@ header {
       display: none; }
     @media (min-width: 768px) {
       header .header_logo {
-        width: 6.5rem; }
+        width: 50rem; }
+        header .header_logo img {
+          width: 6.5rem; }
         header .header_logo p {
           color: #fff;
           display: flex;
           align-items: center;
           margin-left: 10px;
-          font-weight: 300;
+          font-weight: 200;
           font-size: 2rem; } }
   header .header_nav {
     display: flex;
@@ -167,7 +170,8 @@ header {
   border-width: .99em 1.34em 0 0; }
 
 .home-section {
-  padding-top: 7.7rem; }
+  padding: .45rem;
+  padding-top: 7.5rem; }
   @media (min-width: 768px) {
     .home-section {
       display: grid;
@@ -190,7 +194,11 @@ header {
           /*Tamanio de la columna derecha.*/ } }
 
 .highlight {
-  margin-left: 5px; }
+  margin-bottom: 5px; }
+  @media (min-width: 768px) {
+    .highlight {
+      margin-left: 5px;
+      margin-bottom: 0px; } }
   .highlight figcaption {
     width: 70%; }
 
@@ -202,11 +210,21 @@ header {
     width: 100%;
     max-height: 100%;
     height: 100%;
-    object-fit: cover; }
+    object-fit: cover;
+    border-radius: 5px; }
+    @media (min-width: 768px) {
+      .column-image-highlight img {
+        border-radius: 0px; } }
 
 .thumbnails {
-  width: calc(100% + 5px);
-  /* Ancho del 100% más 5 píxeles adicionales */ }
+  width: calc(100% + 5px); }
+  @media (max-width: 768px) {
+    .thumbnails {
+      overflow-y: hidden;
+      white-space: nowrap;
+      /* Impide que los elementos se rompan en varias líneas */
+      overflow-x: scroll;
+      /* Agrega una barra de desplazamiento horizontal */ } }
   @media (min-width: 768px) {
     .thumbnails {
       width: 100%; } }
@@ -223,15 +241,22 @@ header {
       max-height: 100%;
       height: calc(100% + 115px);
       object-fit: cover;
-      /* Esto hará que la imagen ocupe todo el contenedor sin distorsionarse */ }
+      /* Esto hará que la imagen ocupe todo el contenedor sin distorsionarse */
+      border-radius: 5px; }
+      @media (min-width: 768px) {
+        .thumbnails .thumbnails_image-overlay img {
+          border-radius: 0px; } }
 
 .thumbnails_image-overlay {
   position: relative;
-  float: left;
+  display: inline-block;
+  /* Alinea los elementos en línea */
   /* Asegura que los elementos internos se posicionen en relación a este contenedor */
-  width: 33%; }
+  width: 75%; }
   @media (min-width: 768px) {
     .thumbnails_image-overlay {
+      display: block;
+      float: left;
       width: 100%; } }
 
 .overlay {
@@ -241,7 +266,11 @@ header {
   left: 0;
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
-  padding: 10px; }
+  padding: 10px;
+  border-radius: 0px 0px 0px 5px; }
+  @media (min-width: 768px) {
+    .overlay {
+      border-radius: 0px; } }
 
 figcaption.overlay {
   bottom: 10px; }
@@ -251,3 +280,36 @@ figcaption.overlay {
   .games-section .subtitle {
     position: relative;
     bottom: 14vh; }
+
+.games-section_releases {
+  padding-top: 1rem;
+  padding-bottom: 1rem; }
+  @media (min-width: 768px) {
+    .games-section_releases div:nth-child(even) {
+      float: right; }
+    .games-section_releases div:nth-child(odd) {
+      float: left; } }
+  .games-section_releases .games-section_releases-item {
+    display: grid;
+    margin: 1rem;
+    padding: 15px;
+    border-radius: 3px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Sombra elegante */ }
+    @media (min-width: 768px) {
+      .games-section_releases .games-section_releases-item {
+        grid-template-columns: 20% 80%;
+        width: 50%; } }
+    .games-section_releases .games-section_releases-item img {
+      height: 100%;
+      border-radius: 5px; }
+    .games-section_releases .games-section_releases-item div:nth-child(2) {
+      margin-top: 15px; }
+      @media (min-width: 768px) {
+        .games-section_releases .games-section_releases-item div:nth-child(2) {
+          margin-top: 0px;
+          margin-left: 15px; } }
+
+.clearfix {
+  clear: both; }

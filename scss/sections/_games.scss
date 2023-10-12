@@ -1,7 +1,60 @@
-.games-section{
+.games-section {
     background-color: $color-1;
-    & .subtitle{
+
+    & .subtitle {
         position: relative;
         bottom: 14vh;
     }
+}
+
+.games-section_releases {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    @media (min-width: $screen-md) {
+        & div:nth-child(even) {
+            float: right;
+        }
+
+        & div:nth-child(odd) {
+            float: left;
+        }
+    }
+
+
+    & .games-section_releases-item {
+        display: grid;
+
+        @media (min-width: $screen-md) {
+            grid-template-columns: 20% 80%;
+            width: 50%;
+        }
+
+        margin: 1rem;
+        padding: 15px;
+        border-radius: 3px;
+        background-color: $color-2;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        /* Sombra elegante */
+
+        img {
+            height: 100%;
+            border-radius: 5px;
+        }
+
+        div:nth-child(2) {
+            margin-top: 15px;
+            @media (min-width: $screen-md) {
+                margin-top: 0px;
+                margin-left: 15px;
+            }
+        }
+
+    }
+
+
+}
+
+.clearfix {
+    clear: both;
 }

@@ -24,20 +24,22 @@ header {
         width: 5rem;
         min-width: 65px;
         margin-left: 15px;
-
+        
         & p{
             display: none;
         }
 
         @media (min-width: $screen-md) {
-            width: 6.5rem;
-
+            & img{
+                width: 6.5rem;
+            }   
+            width: 50rem;
             & p {
                 color: $color-2;
                 display: flex;
                 align-items: center;
                 margin-left: 10px;
-                font-weight: 300;
+                font-weight: 200;
                 font-size: 2rem;
             }
         }
