@@ -59,6 +59,33 @@ main {
   position: relative;
   z-index: 111; }
 
+.greenbig {
+  -webkit-appearance: none;
+  background-color: #28a745;
+  background-image: linear-gradient(-180deg, #34d058, #28a745 90%);
+  background-position: -1px -1px;
+  background-repeat: repeat no-repeat;
+  background-size: 110% 110%;
+  border-radius: 3px;
+  box-shadow: none;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 20px;
+  outline: none;
+  position: relative;
+  text-decoration: none;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap; }
+  .greenbig:hover {
+    background-color: #269f42;
+    background-image: linear-gradient(-180deg, #2fcb53, #269f42 90%);
+    background-position: -.5em center;
+    border-color: rgba(27, 31, 35, 0.5);
+    outline: 0; }
+
 header {
   position: relative;
   height: 7rem;
@@ -84,7 +111,7 @@ header {
       display: none; }
     @media (min-width: 768px) {
       header .header_logo {
-        width: 50rem; }
+        width: 35rem; }
         header .header_logo img {
           width: 6.5rem; }
         header .header_logo p {
@@ -92,8 +119,10 @@ header {
           display: flex;
           align-items: center;
           margin-left: 10px;
-          font-weight: 200;
-          font-size: 2rem; } }
+          font-weight: 200; } }
+    @media (min-width: 1366px) {
+      header .header_logo p {
+        font-size: 2rem; } }
   header .header_nav {
     display: flex;
     justify-content: space-between;
@@ -108,7 +137,8 @@ header {
       list-style: none;
       padding: 0;
       display: flex;
-      align-items: center; }
+      align-items: center;
+      margin-right: 1rem; }
       header .header_nav ul .burger-menu {
         position: absolute;
         right: -1rem;
@@ -118,14 +148,16 @@ header {
           header .header_nav ul .burger-menu {
             visibility: hidden; } }
       header .header_nav ul li {
-        margin-right: 2rem;
-        padding: 0 1rem 0 1rem;
+        display: flex;
+        justify-content: center;
+        padding: 0rem 0rem 0rem 0rem;
+        font-size: 15px;
         color: white;
         font-weight: bold;
         text-transform: uppercase;
         cursor: pointer;
         height: 100%;
-        font-size: 18px;
+        width: 140px;
         /* Usa flexbox para alinear verticalmente el contenido */
         display: flex;
         align-items: center;
@@ -133,6 +165,9 @@ header {
         header .header_nav ul li:hover {
           background-color: #ac042b;
           transition: all .3s; }
+        @media (min-width: 1366px) {
+          header .header_nav ul li {
+            font-size: 18px; } }
 
 .ribbon-container {
   background: transparent !important;
@@ -251,7 +286,6 @@ header {
   position: relative;
   display: inline-block;
   /* Alinea los elementos en línea */
-  /* Asegura que los elementos internos se posicionen en relación a este contenedor */
   width: 75%; }
   @media (min-width: 768px) {
     .thumbnails_image-overlay {
@@ -310,6 +344,17 @@ figcaption.overlay {
         .games-section_releases .games-section_releases-item div:nth-child(2) {
           margin-top: 0px;
           margin-left: 15px; } }
+    .games-section_releases .games-section_releases-item button {
+      margin-top: 15px;
+      padding: 1rem;
+      font-size: 15px; }
+      @media (min-width: 768px) {
+        .games-section_releases .games-section_releases-item button {
+          font-size: 12px;
+          padding: 5px;
+          margin-top: 5px; }
+          .games-section_releases .games-section_releases-item button span {
+            margin-left: 5px; } }
 
 .clearfix {
   clear: both; }

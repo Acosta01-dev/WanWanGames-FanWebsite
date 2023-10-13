@@ -2,8 +2,6 @@ header {
     position: relative;
     height: 7rem;
     padding-left: 0rem;
-
-
     @media (min-width: $screen-md) {
         //Evita que pantallas pequenias tengan estas propiedades exclusivas para monitores.
         margin-top: 1rem;
@@ -17,39 +15,38 @@ header {
         /* Margen derecho reducido en 2rem */
     }
 
-
     & .header_logo {
         display: flex;
         flex-direction: row;
         width: 5rem;
         min-width: 65px;
         margin-left: 15px;
-        
-        & p{
+        & p {
             display: none;
         }
-
         @media (min-width: $screen-md) {
-            & img{
+            & img {
                 width: 6.5rem;
-            }   
-            width: 50rem;
+            }
+            width: 35rem;
             & p {
                 color: $color-2;
                 display: flex;
                 align-items: center;
                 margin-left: 10px;
                 font-weight: 200;
+            }
+        }
+        @media (min-width: 1366px) {
+            p {
                 font-size: 2rem;
             }
         }
     }
-
     & .header_nav {
         display: flex;
         justify-content: space-between;
         flex-direction: row;
-       
         .header_nav-item {
             visibility: hidden;
             font-weight: 300;
@@ -57,57 +54,50 @@ header {
                 visibility: visible;
             }
         }
-
         ul {
-
             list-style: none;
             padding: 0;
             display: flex;
             align-items: center;
-
+            margin-right: 1rem;
             & .burger-menu {
                 position: absolute;
                 right: -1rem;
                 top: -1.3rem;
-
                 font-size: 2rem;
-
                 @media (min-width: $screen-md) {
                     visibility: hidden;
                 }
             }
-
             li {
-
-                margin-right: 2rem;
-                padding: 0 1rem 0 1rem;
-
+                display: flex;
+                justify-content: center;
+                padding: 0rem 0rem 0rem 0rem;
+                font-size: 15px;
                 color: white;
                 font-weight: bold;
                 text-transform: uppercase;
                 cursor: pointer;
-
                 height: 100%;
-                font-size: 18px;
-
+                width: 140px;
                 /* Usa flexbox para alinear verticalmente el contenido */
                 display: flex;
                 align-items: center;
-
                 /* Alinea el contenido verticalmente en el centro */
                 &:hover {
                     background-color: #ac042b;
                     transition: all .3s;
+                }
+                @media (min-width: 1366px) {
+                    font-size: 18px;
                 }
             }
         }
     }
 }
 
-
 .ribbon-container {
     background: transparent !important;
-
     position: relative;
     z-index: 1;
 }
@@ -116,19 +106,15 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-
     background-color: #ef233c;
-
     @media (min-width: $screen-md) {
         box-shadow: 0 4px 8px rgba(0, 0, 0, .2);
     }
-
 }
 
 .ribbon-content:before,
 .ribbon-content:after {
     content: '';
-
     @media (min-width: $screen-md) {
         //Evita que pantallas pequenias tengan estas propiedades exclusivas para monitores.
         display: block;
@@ -136,7 +122,6 @@ header {
         border-style: solid;
         border-color: #d80032 transparent transparent transparent;
         bottom: -15px;
-
         box-shadow: 0 2px 4px rgba(1, 1, 1, 0);
     }
 }

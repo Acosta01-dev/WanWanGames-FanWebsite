@@ -1,6 +1,5 @@
 /* Mi enfoque es "Mobile first", pero esto no implica que el diseño móvil deba tener más atención y detalles que el diseño de escritorio; 
 de hecho, le otorgo prioridad en cuanto a detalles al diseño de escritorio.*/
-
 @import "utilities/variables";
 
 @import "reset";
@@ -8,6 +7,7 @@ de hecho, le otorgo prioridad en cuanto a detalles al diseño de escritorio.*/
 @import "components/burguer-menu";
 @import "components/separator";
 @import "components/text";
+@import "components/button";
 
 @import "base/variables";
 

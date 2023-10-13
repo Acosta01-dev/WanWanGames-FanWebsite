@@ -1,27 +1,22 @@
 .home-section {
     padding: .45rem;
     padding-top: 7.5rem;
-
     @media (min-width: $screen-md) {
         display: grid;
         grid-template-columns: 70% 30%;
         padding-top: 12rem;
     }
-
     & .column {
         padding: 0px;
         position: relative;
         z-index: 111;
-
         @media (min-width: $screen-md) {
             padding: 5px;
             padding-left: 0px;
         }
-
         /* Agrega esta línea para posicionar el figcaption relativo a este contenedor */
         &:last-child {
             height: 100px;
-
             @media (min-width: $screen-md) {
 
                 height: 350px;
@@ -33,12 +28,10 @@
 
 .highlight {
     margin-bottom: 5px;
-
     @media (min-width: $screen-md) {
         margin-left: 5px;
         margin-bottom: 0px;
     }
-
     & figcaption {
         width: 70%;
     }
@@ -48,28 +41,23 @@
     height: 350px;
     /* Alto del contenedor highlight, igual al de la columna derecha*/
     overflow: hidden;
-
     & img {
         width: 100%;
         max-height: 100%;
         height: 100%;
         object-fit: cover;
-
         border-radius: 5px;
-
         @media (min-width: $screen-md) {
             border-radius: 0px;
         }
     }
 }
 
-/////////////THUMNAILS DERECHA-ABAJO//////////////////
 
 
 /////////////THUMNAILS DERECHA-ABAJO//////////////////
 .thumbnails {
     width: calc(100% + 5px);
-
     @media (max-width: $screen-md) {
         overflow-y: hidden;
         white-space: nowrap;
@@ -77,35 +65,24 @@
         overflow-x: scroll;
         /* Agrega una barra de desplazamiento horizontal */
     }
-
     @media (min-width: $screen-md) {
         width: 100%;
-
     }
-
     & .thumbnails_image-overlay {
-
         background-color: rgba(0, 128, 0, 0);
         height: 100%;
-
         /* Altura de los thumbnails debajo */
-
-
         @media (min-width: $screen-md) {
             height: 34.3%;
             /* Altura de los thumbnails en la derecha */
         }
-
         & img {
             width: 100%;
             max-height: 100%;
             height: calc(100% + 115px);
-
             object-fit: cover;
             /* Esto hará que la imagen ocupe todo el contenedor sin distorsionarse */
-
             border-radius: 5px;
-
             @media (min-width: $screen-md) {
                 border-radius: 0px;
             }
@@ -117,10 +94,7 @@
     position: relative;
     display: inline-block;
     /* Alinea los elementos en línea */
-
-    /* Asegura que los elementos internos se posicionen en relación a este contenedor */
     width: 75%;
-
     @media (min-width: $screen-md) {
         display: block;
         float: left;
@@ -136,9 +110,7 @@
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
     padding: 10px;
-
     border-radius: 0px 0px 0px 5px;
-
     @media (min-width: $screen-md) {
         border-radius: 0px;
     }
@@ -150,6 +122,3 @@ figcaption.overlay {
 
 /////////////FIN THUMNAILS DERECHA-ABAJO//////////////////
 
-
-/////////////BURGUER MENU//////////////////
-/////////////FINBURGUER MENU//////////////////
