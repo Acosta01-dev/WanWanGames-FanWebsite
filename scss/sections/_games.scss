@@ -9,7 +9,11 @@
 .games-section_releases {
     padding-top: 1rem;
     padding-bottom: 1rem;
-    @media (min-width: $screen-md) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    @media (min-width: $screen-xl) {
+        display: block;
         & div:nth-child(even) {
             float: right;
         }
@@ -19,9 +23,13 @@
     }
     & .games-section_releases-item {
         display: grid;
-        @media (min-width: $screen-md) {
+        max-width: 26rem;
+        @media (min-width: $screen-xl) {
             grid-template-columns: 20% 80%;
+            @media (max-width: 1600px){grid-template-columns: 30% 70%;
+            }
             width: 50%;
+            max-width: 100%;
         }
         margin: 1rem;
         padding: 15px;

@@ -36,13 +36,11 @@ img {
 }
 
 // Otros estilos globales 
-
 main {
-    position: relative;
-    bottom: 10rem;
-    /*Exclusivamente para que sobrepase el ribbon.*/
-
+    @media (min-width: $screen-md){ /*Exclusivamente para que sobrepase el ribbon.*/
+        position: relative;
+        bottom: 10rem;
+    }
     background-color: #fff;
-
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }

@@ -1,7 +1,7 @@
 .home-section {
     padding: .45rem;
-    padding-top: 7.5rem;
     @media (min-width: $screen-md) {
+      
         display: grid;
         grid-template-columns: 70% 30%;
         padding-top: 12rem;
@@ -27,6 +27,8 @@
 }
 
 .highlight {
+    position: relative;
+    z-index: 0;
     margin-bottom: 5px;
     @media (min-width: $screen-md) {
         margin-left: 5px;
@@ -52,8 +54,6 @@
         }
     }
 }
-
-
 
 /////////////THUMNAILS DERECHA-ABAJO//////////////////
 .thumbnails {
