@@ -3,6 +3,8 @@
     background: $color-2;
     height: 22.2vh;
 
+    &:nth-child(2) {}
+
     &::before {
         position: absolute;
         content: '';
@@ -14,6 +16,10 @@
         background: inherit;
         transform: translateX(-50%) translateY(50%);
         bottom: 0px;
-      }
-  }
-  
+    }
+}
+
+.semicircle-second { //Nth child no funciona
+    background: $color-1;
+    height: 10vh;
+}
