@@ -1,0 +1,47 @@
+// Otros estilos globales 
+main {
+    @media (min-width: $screen-md) {
+        /*Exclusivamente para que sobrepase el ribbon.*/
+        position: relative;
+        bottom: 10rem;
+    }
+
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+
+}
+
+.bottom-banner {
+    display: none;
+    @media (min-width: $screen-md) {
+        display: flex;
+    }
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    bottom: 4rem;
+    margin: 0 15%;
+
+    
+
+    a {
+        display: block;
+        text-decoration: none;
+        /* Elimina el subrayado del enlace si no se desea */
+
+        &:nth-child(2) img {
+            width: 370px;
+            /* Estilos adicionales para la segunda imagen si es necesario */
+        }
+    }
+
+    img {
+        width: 200px;
+        /* Set your desired width */
+        object-fit: cover;
+        /* This property will ensure the image covers the specified dimensions */
+    }
+
+
+}

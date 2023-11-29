@@ -16,7 +16,7 @@
 </head>
 
 <body>
-   
+
     <header class="ribbon-container">
         <h2 class="ribbon ribbon-content">
             <a href='#' class="header_logo">
@@ -26,27 +26,29 @@
             <nav class="header_nav">
                 <ul>
                     <li class="header_nav-item">
-                        home
+                        <a href="#home">home</a>
                     </li>
                     <li class="header_nav-item">
-                        our releases
+                        <a href="#our-releases">our releases</a>
                     </li>
                     <li class="header_nav-item">
-                        contact us
+                        <a href="#contact-us">contact us</a>
                     </li>
-                    <li class="burger-menu">a
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
+                    <li class="burger-menu">
+                        <a href="#menu">
+                            a
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                        </a>
                     </li>
-
                 </ul>
             </nav>
         </h2>
     </header>
 
-    <main> <!-- SECTIONS/HOME -->
-        <section class="home-section">
+    <main>
+        <section class="home-section"> <!-- SECTIONS/HOME -->
             <h1 class="subtitle">Welcome to WanWanGames</h1>
             <div class="column highlight">
                 <div class="column-image-highlight">
@@ -56,7 +58,8 @@
                     <div class="date"><span class="day">28</span><span class="month"> Oct</span></div>
                     <h3>Trigger Treat</h3>
                     <p>
-                        is a side scrolling run-and-gun featuring a cast of ghastly ghouls hoping to make it Halloween all year round!
+                        is a side scrolling run-and-gun featuring a cast of ghastly ghouls hoping to make it Halloween
+                        all year round!
                     </p>
                 </figcaption>
             </div>
@@ -75,7 +78,6 @@
                 </div>
             </div>
         </section> <!-- fin SECTIONS/HOME -->
-
         <section class="games-section"> <!-- SECTIONS/GAMES -->
             <section class="semicircle"></section> <!--Separador-->
             <h3 class="subtitle">Our Best Releases</h3>
@@ -122,13 +124,83 @@
                 </div>
             </div>
             <div class="clearfix"></div> <!-- Clearfix -->
-        </section>
+        </section> <!-- fin SECTIONS/GAMES -->
         <section class="semicircle semicircle-second"></section> <!--Separador-->
-        <section>
+        <section class="news-section"> <!-- SECTIONS/NEWS -->
+            <h2 class="subtitle">Our News</h2>
+            <div class="news-section_news">
+                <div class="news-section_highlight">
+                    <img src="https://loremflickr.com/320/240" />
+                    <div>
+                        <h3>Lorem ipsum</h3>
+                        <i>By: Jhon Doe - 1999-12-30 23:59</i>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus est, ipsam ea praesentium
+                            quaerat
+                            ullam. Nulla quos ipsum, nobis perferendis reiciendis fugiat eius ipsam minima ipsa, illo
+                            assumenda
+                            sed soluta!
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, impedit.
+                        </p>
+                        <button class="greenbig">Read More</button>
+                    </div>
+                </div>
+                <div class="news-section_thumbnails">
+                    <div>
+                        <h3>Lorem ipsum</h3>
+                        <i>1999-12-30</i>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam, aspernatur nostrum.
+                            Amet, sit laborum.</p>
+                        <button class="greenbig">Read More</button>
+                    </div>
+                    <div>
+                        <h3>Lorem ipsum 2</h3>
+                        <i>2000-01-01</i>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam, aspernatur nostrum.
+                            Amet, sit laborum. 2</p>
+                        <button class="greenbig">Read More</button>
+                    </div>
+                </div>
+            </div>
+        </section> <!-- fin SECTIONS/NEWS -->
+        <section class="spikes"></section> <!--Separador-->
+        <section class="contact-section"> <!-- SECTIONS/CONTACT -->
+            <h2 class="subtitle">Contact Us</h2>
+
+            <form class="contact-form">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Your Mail:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button class="greenbig" type="submit">Send
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-arrow-right icon-button" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+                    </svg>
+                </button>
+            </form>
 
         </section>
-    </main>
 
+    </main>
+    <div class="bottom-banner">
+        <a href="#">
+            <img src="./img/patreon.png" alt="Patreon">
+        </a>
+        <a href="#">
+            <img src="./img/banner.png" alt="Banner">
+        </a>
+        <a href="#">
+            <img src="./img/steam.png" alt="Steam">
+        </a>
+    </div>
+    
 </body>
 
 </html>

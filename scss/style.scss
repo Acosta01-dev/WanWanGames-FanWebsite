@@ -2,16 +2,18 @@
 de hecho, le otorgo prioridad en cuanto a detalles al diseño de escritorio.*/
 @import "utilities/variables";
 
-@import "reset";
+@import "base/reset";
+@import "base/variables";
 
 @import "components/burguer-menu";
 @import "components/separator";
 @import "components/text";
 @import "components/button";
 
-@import "base/variables";
-
 @import "layouts/header";
 
+@import "sections/main";
 @import "sections/home";
 @import "sections/games";
+@import "sections/news";
+@import "sections/contact";
