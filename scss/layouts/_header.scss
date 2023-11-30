@@ -1,3 +1,14 @@
+.header_nav-item {
+    visibility: hidden;
+    visibility: visible;
+}
+
+.header_nav.active .header_nav-item {
+    visibility: visible;
+
+}
+
+
 header {
     position: relative;
     z-index: 99;
@@ -24,11 +35,16 @@ header {
         min-width: 65px;
         margin-left: 15px;
 
+        position: absolute;
+        left: 0rem;
+
         & p {
             display: none;
         }
 
         @media (min-width: $screen-md) {
+            position: static;
+
             & img {
                 width: 6.5rem;
             }
@@ -58,10 +74,6 @@ header {
     }
 
     & .header_nav {
-        display: flex;
-        justify-content: space-between;
-        flex-direction: row;
-
         .header_nav-item {
             visibility: hidden;
             font-weight: 300;
@@ -73,43 +85,68 @@ header {
 
         ul {
             list-style: none;
-            padding: 0;
             display: flex;
-            align-items: center;
-            margin-right: 1rem;
+            flex-direction: column;
+           
+            
 
-            & .burger-menu {
-                position: absolute;
-                right: -1rem;
-                top: 0rem;
-                font-size: 2rem;
+            padding-top: 5.5rem;
+            height: 0; //Burguer menu js
 
-                @media (min-width: $screen-md) {
-                    visibility: hidden;
-                }
+            @media (min-width: $screen-md) {
+                padding-top: 0;
+                flex-direction: row;
+                height: 100% !important; // Asegúrate de que esta regla anule las definiciones anteriores              
             }
 
+
+
             li {
-                display: flex;
-                justify-content: center;
-                padding: 0rem 0rem 0rem 0rem;
-                font-size: 15px;    
+                margin-bottom: 1rem;
+                margin-right: 1.5rem;
+
+                padding: 1rem;
+
+                width: 100vw;
+                font-size: 15px;
                 font-weight: bold;
                 text-transform: uppercase;
+                
                 cursor: pointer;
-                height: 100%;
-                width: 140px;
-                /* Usa flexbox para alinear verticalmente el contenido */
-                display: flex;
-                align-items: center;
-                a{
+                a {
                     color: white;
                 }
+
                 /* Alinea el contenido verticalmente en el centro */
+                margin-right: 2.5rem;
+
                 @media (min-width: $screen-md) {
+                    width: 10rem;
+                    height: 100%;
+                    font-size: 15px;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    cursor: pointer;
+
+
+                    display: inline-flex;
+                    list-style-type: none;
+
+                    margin: 0px;
+                    padding: 0px;
+                    text-align: center;
+
+                    align-items: center;
+                    justify-content: center;
+
                     &:hover {
                         background-color: #ac042b;
                         transition: all .3s;
+                    }
+
+                    a{
+                      
+                       padding: 0;
                     }
                 }
 
@@ -121,6 +158,28 @@ header {
     }
 }
 
+
+
+
+
+.burger-menu {
+
+    position: absolute;
+    right: 1rem;
+    top: 1.3rem;
+    font-size: 2rem;
+    list-style: none;
+
+    a {
+        color: white;
+    }
+
+    @media (min-width: $screen-md) {
+        visibility: hidden;
+    }
+
+}
+
 .ribbon-container {
     background: transparent !important;
     position: relative;
@@ -128,6 +187,8 @@ header {
 }
 
 .ribbon {
+
+    min-height: 5rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;

@@ -100,6 +100,13 @@ img {
     border-color: rgba(27, 31, 35, 0.5);
     outline: 0; }
 
+.header_nav-item {
+  visibility: hidden;
+  visibility: visible; }
+
+.header_nav.active .header_nav-item {
+  visibility: visible; }
+
 header {
   position: relative;
   z-index: 99;
@@ -121,11 +128,14 @@ header {
     flex-direction: row;
     width: 5rem;
     min-width: 65px;
-    margin-left: 15px; }
+    margin-left: 15px;
+    position: absolute;
+    left: 0rem; }
     header .header_logo p {
       display: none; }
     @media (min-width: 768px) {
       header .header_logo {
+        position: static;
         width: 35rem; }
         header .header_logo img {
           width: 6.5rem; }
@@ -141,53 +151,71 @@ header {
     @media (max-width: 925px) {
       header .header_logo p {
         visibility: hidden; } }
-  header .header_nav {
+  header .header_nav .header_nav-item {
+    visibility: hidden;
+    font-weight: 300; }
+    @media (min-width: 768px) {
+      header .header_nav .header_nav-item {
+        visibility: visible; } }
+  header .header_nav ul {
+    list-style: none;
     display: flex;
-    justify-content: space-between;
-    flex-direction: row; }
-    header .header_nav .header_nav-item {
-      visibility: hidden;
-      font-weight: 300; }
+    flex-direction: column;
+    padding-top: 5.5rem;
+    height: 0; }
+    @media (min-width: 768px) {
+      header .header_nav ul {
+        padding-top: 0;
+        flex-direction: row;
+        height: 100% !important; } }
+    header .header_nav ul li {
+      margin-bottom: 1rem;
+      margin-right: 1.5rem;
+      padding: 1rem;
+      width: 100vw;
+      font-size: 15px;
+      font-weight: bold;
+      text-transform: uppercase;
+      cursor: pointer;
+      /* Alinea el contenido verticalmente en el centro */
+      margin-right: 2.5rem; }
+      header .header_nav ul li a {
+        color: white; }
       @media (min-width: 768px) {
-        header .header_nav .header_nav-item {
-          visibility: visible; } }
-    header .header_nav ul {
-      list-style: none;
-      padding: 0;
-      display: flex;
-      align-items: center;
-      margin-right: 1rem; }
-      header .header_nav ul .burger-menu {
-        position: absolute;
-        right: -1rem;
-        top: 0rem;
-        font-size: 2rem; }
-        @media (min-width: 768px) {
-          header .header_nav ul .burger-menu {
-            visibility: hidden; } }
-      header .header_nav ul li {
-        display: flex;
-        justify-content: center;
-        padding: 0rem 0rem 0rem 0rem;
-        font-size: 15px;
-        font-weight: bold;
-        text-transform: uppercase;
-        cursor: pointer;
-        height: 100%;
-        width: 140px;
-        /* Usa flexbox para alinear verticalmente el contenido */
-        display: flex;
-        align-items: center;
-        /* Alinea el contenido verticalmente en el centro */ }
-        header .header_nav ul li a {
-          color: white; }
-        @media (min-width: 768px) {
+        header .header_nav ul li {
+          width: 10rem;
+          height: 100%;
+          font-size: 15px;
+          font-weight: bold;
+          text-transform: uppercase;
+          cursor: pointer;
+          display: inline-flex;
+          list-style-type: none;
+          margin: 0px;
+          padding: 0px;
+          text-align: center;
+          align-items: center;
+          justify-content: center; }
           header .header_nav ul li:hover {
             background-color: #ac042b;
-            transition: all .3s; } }
-        @media (min-width: 1366px) {
-          header .header_nav ul li {
-            font-size: 18px; } }
+            transition: all .3s; }
+          header .header_nav ul li a {
+            padding: 0; } }
+      @media (min-width: 1366px) {
+        header .header_nav ul li {
+          font-size: 18px; } }
+
+.burger-menu {
+  position: absolute;
+  right: 1rem;
+  top: 1.3rem;
+  font-size: 2rem;
+  list-style: none; }
+  .burger-menu a {
+    color: white; }
+  @media (min-width: 768px) {
+    .burger-menu {
+      visibility: hidden; } }
 
 .ribbon-container {
   background: transparent !important;
@@ -195,6 +223,7 @@ header {
   z-index: 1; }
 
 .ribbon {
+  min-height: 5rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -256,30 +285,30 @@ main {
     object-fit: cover;
     /* This property will ensure the image covers the specified dimensions */ }
 
-.home-section {
+#home-section {
   padding: .45rem; }
-  .home-section .subtitle {
+  #home-section .subtitle {
     margin: 2rem; }
   @media (min-width: 768px) {
-    .home-section {
+    #home-section {
       display: grid;
       grid-template-columns: 70% 30%;
       padding-top: 12rem; }
-      .home-section .subtitle {
+      #home-section .subtitle {
         display: none; } }
-  .home-section .column {
+  #home-section .column {
     padding: 0px;
     position: relative;
     z-index: 111;
     /* Agrega esta línea para posicionar el figcaption relativo a este contenedor */ }
     @media (min-width: 768px) {
-      .home-section .column {
+      #home-section .column {
         padding: 5px;
         padding-left: 0px; } }
-    .home-section .column:last-child {
+    #home-section .column:last-child {
       height: 100px; }
       @media (min-width: 768px) {
-        .home-section .column:last-child {
+        #home-section .column:last-child {
           height: 350px;
           /*Tamanio de la columna derecha.*/ } }
 
@@ -366,9 +395,9 @@ main {
 figcaption.overlay {
   bottom: 10px; }
 
-.games-section {
+#games-section {
   background-color: #ef233c; }
-  .games-section .subtitle {
+  #games-section .subtitle {
     position: relative;
     bottom: 14vh; }
 
@@ -426,10 +455,10 @@ figcaption.overlay {
 .clearfix {
   clear: both; }
 
-.news-section {
+#news-section {
   padding: 15px;
   margin-top: 2rem; }
-  .news-section .subtitle {
+  #news-section .subtitle {
     margin-top: 1.5rem;
     margin-bottom: 2rem; }
 
@@ -493,13 +522,13 @@ figcaption.overlay {
         background-color: #2a28a7;
         background-image: linear-gradient(-180deg, #3485d0, #283ba7 90%); }
 
-.contact-section {
+#contact-section {
   background-color: #ef233c;
   padding-bottom: 2rem; }
-  .contact-section .subtitle {
+  #contact-section .subtitle {
     padding-top: 4rem;
     color: #fff; }
-  .contact-section .icon-button {
+  #contact-section .icon-button {
     position: relative;
     bottom: 1px;
     display: inline;

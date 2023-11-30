@@ -26,29 +26,41 @@
             <nav class="header_nav">
                 <ul>
                     <li class="header_nav-item">
-                        <a href="#home">home</a>
+                        <a href="#home-section">home</a>
                     </li>
                     <li class="header_nav-item">
-                        <a href="#our-releases">our releases</a>
+                        <a href="#games-section">our releases</a>
                     </li>
                     <li class="header_nav-item">
-                        <a href="#contact-us">contact us</a>
+                        <a href="#news-section">our news</a>
                     </li>
-                    <li class="burger-menu">
-                        <a href="#menu">
-                            a
-                            <div class="bar"></div>
-                            <div class="bar"></div>
-                            <div class="bar"></div>
-                        </a>
+                    <li class="header_nav-item">
+                        <a href="#contact-section">contact us</a>
                     </li>
+
                 </ul>
+                <li class="burger-menu">
+                    <a href="#menu" id="menuLink">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                            class="bi bi-list" viewBox="0 0 16 16" id="menuIcon">
+                            <path fill-rule="evenodd"
+                                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+                        </svg>
+
+                        <svg xmlns="http://www.w3.org/2000/svg" width=" " height="32" fill="currentColor"
+                            class="bi bi-x-lg" viewBox="0 0 16 16" id="closeIcon" style="display:none;">
+                            <path d="M1 1 L15 15 M15 1 L1 15" stroke="currentColor" stroke-width="1" />
+                        </svg>
+                    </a>
+
+
+                </li>
             </nav>
         </h2>
     </header>
 
     <main>
-        <section class="home-section"> <!-- SECTIONS/HOME -->
+        <section id="home-section"> <!-- SECTIONS/HOME -->
             <h1 class="subtitle">Welcome to WanWanGames</h1>
             <div class="column highlight">
                 <div class="column-image-highlight">
@@ -78,7 +90,7 @@
                 </div>
             </div>
         </section> <!-- fin SECTIONS/HOME -->
-        <section class="games-section"> <!-- SECTIONS/GAMES -->
+        <section id="games-section"> <!-- SECTIONS/GAMES -->
             <section class="semicircle"></section> <!--Separador-->
             <h3 class="subtitle">Our Best Releases</h3>
             <div class="games-section_releases">
@@ -125,8 +137,8 @@
             </div>
             <div class="clearfix"></div> <!-- Clearfix -->
         </section> <!-- fin SECTIONS/GAMES -->
-        <section class="semicircle semicircle-second"></section> <!--Separador-->
-        <section class="news-section"> <!-- SECTIONS/NEWS -->
+        <div class="semicircle semicircle-second"></div> <!--Separador-->
+        <section id="news-section"> <!-- SECTIONS/NEWS -->
             <h2 class="subtitle">Our News</h2>
             <div class="news-section_news">
                 <div class="news-section_highlight">
@@ -163,8 +175,8 @@
                 </div>
             </div>
         </section> <!-- fin SECTIONS/NEWS -->
-        <section class="spikes"></section> <!--Separador-->
-        <section class="contact-section"> <!-- SECTIONS/CONTACT -->
+        <div class="spikes"></div> <!--Separador-->
+        <section id="contact-section"> <!-- SECTIONS/CONTACT -->
             <h2 class="subtitle">Contact Us</h2>
 
             <form class="contact-form">
@@ -187,7 +199,6 @@
             </form>
 
         </section>
-
     </main>
     <div class="bottom-banner">
         <a href="#">
@@ -200,7 +211,7 @@
             <img src="./img/steam.png" alt="Steam">
         </a>
     </div>
-    
+
 </body>
 
 </html>
