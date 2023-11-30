@@ -8,7 +8,6 @@
 
 }
 
-
 header {
     position: relative;
     z-index: 99;
@@ -87,8 +86,6 @@ header {
             list-style: none;
             display: flex;
             flex-direction: column;
-           
-            
 
             padding-top: 5.5rem;
             height: 0; //Burguer menu js
@@ -111,8 +108,9 @@ header {
                 font-size: 15px;
                 font-weight: bold;
                 text-transform: uppercase;
-                
+
                 cursor: pointer;
+
                 a {
                     color: white;
                 }
@@ -144,9 +142,9 @@ header {
                         transition: all .3s;
                     }
 
-                    a{
-                      
-                       padding: 0;
+                    a {
+
+                        padding: 0;
                     }
                 }
 
