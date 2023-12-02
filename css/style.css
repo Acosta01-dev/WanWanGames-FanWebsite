@@ -100,13 +100,6 @@ img {
     border-color: rgba(27, 31, 35, 0.5);
     outline: 0; }
 
-.header_nav-item {
-  visibility: hidden;
-  visibility: visible; }
-
-.header_nav.active .header_nav-item {
-  visibility: visible; }
-
 header {
   position: relative;
   z-index: 99;
@@ -152,7 +145,6 @@ header {
       header .header_logo p {
         visibility: hidden; } }
   header .header_nav .header_nav-item {
-    visibility: hidden;
     font-weight: 300; }
     @media (min-width: 768px) {
       header .header_nav .header_nav-item {
@@ -162,12 +154,12 @@ header {
     display: flex;
     flex-direction: column;
     padding-top: 5.5rem;
-    height: 0; }
+    overflow: hidden; }
     @media (min-width: 768px) {
       header .header_nav ul {
         padding-top: 0;
         flex-direction: row;
-        height: 100% !important; } }
+        max-height: 100% !important; } }
     header .header_nav ul li {
       margin-bottom: 1rem;
       margin-right: 1.5rem;
@@ -223,14 +215,20 @@ header {
   z-index: 1; }
 
 .ribbon {
-  min-height: 5rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  min-height: 5rem;
+  max-height: 5rem;
+  overflow: hidden;
   background-color: #ef233c; }
   @media (min-width: 768px) {
     .ribbon {
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); } }
+
+.ribbon.active {
+  max-height: 50rem;
+  transition: max-height 0.5s ease-in-out; }
 
 .ribbon-content:before,
 .ribbon-content:after {
