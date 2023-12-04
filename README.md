@@ -14,3 +14,5 @@ This repository contains the source code for a straightforward website dedicated
 - **Sass, HTML, and JavaScript:** The page is built using Sass for style management, HTML for page structure, and JavaScript for interactive functionality.
 
 - **Clean Design:** The design aims to be clean and simple, focusing on presenting key information about the game development company.
+
+![Preview](https://github.com/Acosta01-dev/WanWanGames-FanWebsite/assets/79601880/9d041016-8e97-46e5-870e-98bd85478851)
