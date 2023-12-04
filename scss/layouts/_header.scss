@@ -58,8 +58,6 @@ header {
 
     & .header_nav {
         @media (min-width: $screen-md) {
-            display: flex;
-            align-items: center;
             margin-right: 1.7rem;
         }
 
@@ -75,13 +73,14 @@ header {
             list-style: none;
             display: flex;
             flex-direction: column;
-            padding-top: 5rem;
+            padding-top: 6.5rem;
+            padding-left: 1rem;
             overflow: hidden;
-
             height: 100%;
 
+
             @media (min-width: $screen-md) {
-                padding-top: 0;
+                padding: 0;
                 flex-direction: row;
             }
 
@@ -92,20 +91,26 @@ header {
                 margin: 0 0 2rem 0;
                 padding: 0 .5rem;
                 cursor: pointer;
-                text-align: center;
+
                 display: flex;
                 align-items: center;
 
                 a {
                     color: white;
                     display: block;
+
+                    @media (min-width: $screen-md) {
+                        padding: 1.5rem 1rem;
+                    }
+
                 }
 
                 @media (min-width: $screen-md) {
+
+                    text-align: center;
                     margin: 0; //no quitar
                     font-size: 15px;
                     font-weight: bold;
-                    text-transform: uppercase;
                     cursor: pointer;
                     list-style-type: none;
 
@@ -148,13 +153,13 @@ header {
 .ribbon {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     min-height: 5rem;
     max-height: 5rem;
     overflow: hidden;
     background-color: #ef233c;
 
     @media (min-width: $screen-md) {
+        justify-content: space-between;
         max-height: 100% !important;
         box-shadow: 0 4px 8px rgba(0, 0, 0, .2);
     }
